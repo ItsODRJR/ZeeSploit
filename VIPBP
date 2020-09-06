@@ -1,0 +1,3 @@
+game.Players.LocalPlayer.settings.vip.Value = true
+game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - You Have Recieved VIP"
+game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
