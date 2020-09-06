@@ -12,7 +12,7 @@ local BoomBox = Instance.new("TextButton")
 --Properties:
 
 ZeeSploit.Name = "ZeeSploit"
-ZeeSploit.Parent = game.Workspace
+ZeeSploit.Parent = game.Players.LocalPlayer.PlayerGui
 ZeeSploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ZeeSploit
@@ -116,4 +116,3 @@ local function LXXTC_fake_script() -- Frame.Exploit
 		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
 	end)
 end
-coroutine.wrap(LXXTC_fake_script)()
