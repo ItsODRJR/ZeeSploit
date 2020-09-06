@@ -22,6 +22,7 @@ Frame.BorderSizePixel = 10
 Frame.Position = UDim2.new(0, 0, 0.733760893, 0)
 Frame.Size = UDim2.new(0.370303899, 0, 0.265261173, 0)
 Frame.Active = true
+Frame.Draggable = true
 
 VIP.Name = "VIP"
 VIP.Parent = Frame
@@ -35,6 +36,11 @@ VIP.TextColor3 = Color3.fromRGB(0, 0, 0)
 VIP.TextScaled = true
 VIP.TextSize = 14.000
 VIP.TextWrapped = true
+VIP.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.settings.vip.Value = true
+	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - You Have Recieved VIP."
+	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
+end)
 
 Table.Name = "Table"
 Table.Parent = Frame
@@ -48,6 +54,12 @@ Table.TextColor3 = Color3.fromRGB(0, 0, 0)
 Table.TextScaled = true
 Table.TextSize = 14.000
 Table.TextWrapped = true
+Table.MouseButton1Click:Connect(function()
+	script.Parent.Parent.Parent.Parent.Character.Torso.CFrame = CFrame.new(-30.015, 10.59159, -211.105)
+	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - Teleport Success!"
+	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
+end)
+
 
 ZeeSploit_2.Name = "ZeeSploit"
 ZeeSploit_2.Parent = Frame
@@ -73,6 +85,12 @@ BoomBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 BoomBox.TextScaled = true
 BoomBox.TextSize = 14.000
 BoomBox.TextWrapped = true
+BoomBox.MouseButton1Click:Connect(function()
+	local Boom = script.Parent.BoomBox.BoomBox:Clone()
+	Boom.Parent = game.Players.LocalPlayer.Backpack
+	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - You Have Recieved A BoomBox."
+	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
+end)
 
 -- Scripts:
 
