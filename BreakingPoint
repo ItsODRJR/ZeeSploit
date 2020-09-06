@@ -55,7 +55,7 @@ Table.TextScaled = true
 Table.TextSize = 14.000
 Table.TextWrapped = true
 Table.MouseButton1Click:Connect(function()
-	script.Parent.Parent.Parent.Parent.Character.Torso.Position = Vector3.new(-30.015, 10.59159, -211.105)
+	game.Players.LocalPlayer.Character.Torso.Position = Vector3.new(-30.015, 10.59159, -211.105)
 	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - Teleport Success!"
 	game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
 end)
