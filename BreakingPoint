@@ -1,0 +1,100 @@
+-- ZeeSploit: Breaking Point
+
+-- Instances:
+
+local ZeeSploit = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local VIP = Instance.new("TextButton")
+local Table = Instance.new("TextButton")
+local ZeeSploit_2 = Instance.new("TextButton")
+local BoomBox = Instance.new("TextButton")
+
+--Properties:
+
+ZeeSploit.Name = "ZeeSploit"
+ZeeSploit.Parent = game.Workspace
+ZeeSploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ZeeSploit
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.500
+Frame.BorderSizePixel = 10
+Frame.Position = UDim2.new(0, 0, 0.733760893, 0)
+Frame.Size = UDim2.new(0.370303899, 0, 0.265261173, 0)
+
+VIP.Name = "VIP"
+VIP.Parent = Frame
+VIP.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+VIP.BorderSizePixel = 10
+VIP.Position = UDim2.new(0.0553540252, 0, 0.373546362, 0)
+VIP.Size = UDim2.new(0, 200, 0, 50)
+VIP.Font = Enum.Font.Cartoon
+VIP.Text = "VIP"
+VIP.TextColor3 = Color3.fromRGB(0, 0, 0)
+VIP.TextScaled = true
+VIP.TextSize = 14.000
+VIP.TextWrapped = true
+
+Table.Name = "Table"
+Table.Parent = Frame
+Table.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+Table.BorderSizePixel = 10
+Table.Position = UDim2.new(0.545632422, 0, 0.373546362, 0)
+Table.Size = UDim2.new(0, 200, 0, 50)
+Table.Font = Enum.Font.Cartoon
+Table.Text = "Table"
+Table.TextColor3 = Color3.fromRGB(0, 0, 0)
+Table.TextScaled = true
+Table.TextSize = 14.000
+Table.TextWrapped = true
+
+ZeeSploit_2.Name = "ZeeSploit"
+ZeeSploit_2.Parent = Frame
+ZeeSploit_2.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+ZeeSploit_2.BorderSizePixel = 10
+ZeeSploit_2.Size = UDim2.new(0, 505, 0, 50)
+ZeeSploit_2.Font = Enum.Font.Cartoon
+ZeeSploit_2.Text = "ZeeSploit: Breaking Point"
+ZeeSploit_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ZeeSploit_2.TextScaled = true
+ZeeSploit_2.TextSize = 14.000
+ZeeSploit_2.TextWrapped = true
+
+BoomBox.Name = "BoomBox"
+BoomBox.Parent = Frame
+BoomBox.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+BoomBox.BorderSizePixel = 10
+BoomBox.Position = UDim2.new(0.0553540364, 0, 0.752007842, 0)
+BoomBox.Size = UDim2.new(0, 448, 0, 50)
+BoomBox.Font = Enum.Font.Cartoon
+BoomBox.Text = "BoomBox"
+BoomBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+BoomBox.TextScaled = true
+BoomBox.TextSize = 14.000
+BoomBox.TextWrapped = true
+
+-- Scripts:
+
+local function LXXTC_fake_script() -- Frame.Exploit 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.VIP.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.settings.vip.Value = true
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - You Have Recieved VIP."
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
+	end)
+	
+	script.Parent.BoomBox.MouseButton1Click:Connect(function()
+		local Boom = script.Parent.BoomBox.BoomBox:Clone()
+		Boom.Parent = game.Players.LocalPlayer.Backpack
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - You Have Recieved A BoomBox."
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
+	end)
+	
+	script.Parent.BoomBox.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Character.Torso.CFrame = CFrame.new(-30.015, 10.59159, -211.105)
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.ImageLabel.TextLabel.Text = "ZeeSploit - Teleport Success!"
+		game.Players.LocalPlayer.PlayerGui.ScreenGui.msgbox.Visible = true
+	end)
+end
+coroutine.wrap(LXXTC_fake_script)()
