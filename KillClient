@@ -1,0 +1,6 @@
+--//idk if this even works i just made bc im bored
+
+game["Run Service"].RenderStepped:Connect(function()
+local L = Instance.new("Part", workspace)
+L.Size = Vector3.new(math.huge,math.huge,math.huge)
+end)
